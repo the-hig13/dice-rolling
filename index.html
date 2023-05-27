@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Roll Some Dice</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Dice Roller</title>
 </head>
 <body>
-  <h1>Dice Rolling</h1>
-  <div class="form-container">
-    <label for="quantity">How Many Dice?</label>
-    <input type="text" id="quantity" placeholder="Enter quantity" />
-    <label for="faces">How Many Sides?</label>
-    <input type="text" id="faces" placeholder="Enter faces" />
-    <button onclick="rollDice()">Roll</button>
+  <div class="container">
+    <h1>Dice Roller</h1>
+    <div class="form-container">
+      <label for="quantity">How Many Dice?</label>
+      <input type="number" id="quantity" min="1" max="15">
+      <label for="faces">How Many Sides?</label>
+      <input type="number" id="faces" min="2" max="100">
+      <button id="roll-button">Roll</button>
+    </div>
+    <div id="output-container"></div>
+    <div id="output"></div>
   </div>
-  <div id="output" class="output-container"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
