@@ -44,16 +44,15 @@ function rollDice() {
       return acc + val;
     }, 0);
     outputDiv.innerHTML += '<p class="bold">Total: ' + total + '</p>';
-    setTimeout(promptToRollAgain, 0);
+    promptToRollAgain();
   }
 
-  function promptToRollAgain() {
-    if (confirm('Would you like to roll again?')) {
-      rollDice();
-    } else {
-      outputDiv.innerHTML += '<p>Thank you for rolling :)</p>';
-    }
-  }
+function promptToRollAgain() {
+  var outputDiv = document.getElementById('output');
+  outputDiv.innerHTML += '<p>Thank you for rolling :)</p>';
+}
 
   displayDiceResult();
 }
+
+document.getElementById('roll-button').addEventListener('click', rollDice);
